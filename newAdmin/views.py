@@ -1,9 +1,9 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+
 
 # Create your views here.
 def addAdmission(request):
-    return HttpResponse("This is the add admission page.")
+    return render(request, 'admissions/add-admission.html')
 
 def admissionReport(request):
-    return HttpResponse("This is the admission report page.")
+    return render(request, 'admissions/admission-report.html')

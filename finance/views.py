@@ -1,12 +1,12 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+
 
 # Create your views here.
 def feeCollection(request):
-    return HttpResponse("This is the fee collection page.")
+    return render(request, 'finance/fee-collection.html')
 
 def feeDuesReport(request):
-    return HttpResponse("This is the fee dues report page.")
+    return render(request, 'finance/fee-dues-report.html')
 
 def feeCollectionReport(request):
-    return HttpResponse("This is the fee collection report page.")
+    return render(request, 'finance/fee-collection-report.html')
