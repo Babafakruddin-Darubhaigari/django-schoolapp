@@ -3,7 +3,8 @@ from django.shortcuts import render
 
 # Create your views here.
 def addAdmission(request):
-    return render(request, 'admissions/add-admission.html')
+    values = {"name": "Baba", "age": 25, "grade": "10th"}
+    return render(request, 'admissions/add-admission.html', values)
 
 def admissionReport(request):
     return render(request, 'admissions/admission-report.html')
