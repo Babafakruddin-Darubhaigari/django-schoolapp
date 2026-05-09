@@ -1,0 +1,79 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Management System</title>
+
+    <link rel="stylesheet" href="{% static 'stylesheets/styles.css' %}">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <h1 class="main-heading">Welcome to home page</h1>
+
+    <p class="sub-text">
+        This is the home page of our school management system.
+        Admissions are open now!
+    </p>
+
+    <div class="container">
+
+        <!-- Admissions Card -->
+        <div class="card admission-card">
+
+            <div class="icon-circle blue-icon">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+
+            <h2>Admissions</h2>
+
+            <a href="./Ad/newAdm" class="btn blue-btn">
+                <i class="fa-solid fa-user-plus"></i>
+                Add Admission
+            </a>
+
+            <a href="./Ad/admReport" class="btn blue-btn">
+                <i class="fa-solid fa-file-lines"></i>
+                Admission Report
+            </a>
+
+        </div>
+
+
+        <!-- Finance Card -->
+        <div class="card finance-card">
+
+            <div class="icon-circle green-icon">
+                <i class="fa-solid fa-indian-rupee-sign"></i>
+            </div>
+
+            <h2>Finance</h2>
+
+            <a href="./fin/feeCo" class="btn green-btn">
+                <i class="fa-solid fa-wallet"></i>
+                Fee Collection
+            </a>
+
+            <a href="./fin/feeDues" class="btn green-btn">
+                <i class="fa-solid fa-chart-column"></i>
+                Finance Report
+            </a>
+
+            <a href="./fin/feeColReport" class="btn green-btn">
+                <i class="fa-solid fa-clipboard-list"></i>
+                Fee Collection Report
+            </a>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

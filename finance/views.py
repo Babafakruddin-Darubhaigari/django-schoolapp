@@ -9,4 +9,4 @@ def feeDuesReport(request):
     return render(request, 'finance/fee-dues-report.html')
 
 def feeCollectionReport(request):
-    return render(request, 'finance/fee-collection-report.html')
+    return render(request, 'finance/fee-collection.html')
