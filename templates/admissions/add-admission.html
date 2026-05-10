@@ -10,9 +10,22 @@
 </head>
 <body>
     <h1>add-admissions page</h1>
-    <img src="{% static 'images/nature.jpg' %}" alt="Image not found">
-    <h1>My name is {{ name }}</h1>
-    <p>Age: {{ age }}</p>
-    <p>Grade: {{ grade }}</p>
+
+    <table border="1px">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Grade</th>
+        </tr>
+        {% for student in allStudents %}
+        <tr>
+            <td>{{ student.name }}</td>
+            <td>{{ student.age }}</td>
+            <td>{{ student.grade }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    
 </body>
 </html>
