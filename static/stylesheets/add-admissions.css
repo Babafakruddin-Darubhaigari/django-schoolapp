@@ -1,6 +1,8 @@
 body{
     background-color: #f4f7ff;
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 .page-heading{
@@ -17,14 +19,67 @@ body{
     margin-bottom: 40px;
 }
 
-.admission-wrapper{
+.main-container{
     width: 90%;
-    max-width: 1100px;
+    max-width: 1200px;
     margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.form-section,
+.table-section{
     background: white;
     padding: 30px;
     border-radius: 20px;
     box-shadow: 0px 8px 20px rgba(0,0,0,0.08);
+}
+
+.form-section h2{
+    color: #2436d1;
+    margin-bottom: 25px;
+}
+
+.input-group{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.input-group label{
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+.input-group input{
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.input-group input:focus{
+    outline: none;
+    border-color: #2436d1;
+}
+
+.submit-btn{
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(90deg, #2436d1, #4c5cff);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-btn:hover{
+    transform: scale(1.02);
 }
 
 .top-actions{
@@ -92,4 +147,12 @@ tbody tr:hover{
 
 .icon-space{
     margin-right: 8px;
+}
+
+@media(max-width: 900px){
+
+    .main-container{
+        grid-template-columns: 1fr;
+    }
+
 }
