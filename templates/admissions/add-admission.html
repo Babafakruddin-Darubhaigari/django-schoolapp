@@ -5,27 +5,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>add-admissions page</title>
-    <link rel="stylesheet" href="{% static 'stylesheets/styles.css' %}" type="text/css">
+    <title>Add Admissions</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="{% static 'stylesheets/add-admissions.css' %}">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
 <body>
-    <h1>add-admissions page</h1>
 
-    <table border="1px">
-        <tr>
-            <th>Name</th>
-            <th>Age</th>
-            <th>Grade</th>
-        </tr>
-        {% for student in allStudents %}
-        <tr>
-            <td>{{ student.name }}</td>
-            <td>{{ student.age }}</td>
-            <td>{{ student.grade }}</td>
-        </tr>
-        {% endfor %}
-    </table>
+    <h1 class="page-heading">
+        <i class="fa-solid fa-user-graduate icon-space"></i>
+        Student Admissions
+    </h1>
 
-    
+    <p class="page-subtext">
+        View all admitted students and their details below.
+    </p>
+
+    <div class="admission-wrapper">
+
+        <div class="top-actions">
+
+            <div class="student-count">
+                Total Students : {{ allStudents|length }}
+            </div>
+
+            <a href="/" class="home-btn">
+                <i class="fa-solid fa-house"></i>
+                Back to Home
+            </a>
+
+        </div>
+
+        {% if allStudents %}
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Student ID</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Grade</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                {% for student in allStudents %}
+                <tr>
+                    <td>{{ student.id }}</td>
+                    <td>{{ student.name }}</td>
+                    <td>{{ student.age }}</td>
+                    <td>{{ student.grade }}</td>
+                </tr>
+                {% endfor %}
+
+            </tbody>
+
+        </table>
+
+        {% else %}
+
+        <div class="empty-message">
+            <i class="fa-solid fa-circle-info"></i>
+            No student admissions available.
+        </div>
+
+        {% endif %}
+
+    </div>
+
 </body>
 </html>
